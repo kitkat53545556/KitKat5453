@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark hacker | Kitkat535 </title>
+    <style>
+        /* Basic Settings */
+        body {
+            background-color: black;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Matrix Canvas */
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Main Container - Bio Box */
+        .container {
+            position: relative;
+            padding: 15px;
+            max-width: 80%;
+            width: 300px;
+            margin: 30px auto;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid #00ff00;
+            box-shadow: 0px 0px 15px #00ff00;
+            border-radius: 10px;
+            z-index: 2;
+        }
+
+        /* Profile Image */
+        .profile-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 2px solid #00ff00;
+            box-shadow: 0px 0px 15px #00ff00;
+            margin-bottom: 10px;
+        }
+
+        /* Bio Section */
+        .bio h2 {
+            font-size: 1.3em;
+            text-shadow: 0px 0px 10px #00ff00;
+        }
+        .bio p {
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+
+        /* Button */
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            border: 2px solid #00ff00;
+            box-shadow: 0px 0px 10px #00ff00;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button a {
+            color: #00ff00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #00ff00;
+            color: black;
+        }
+
+        /* Skills Section - Appears on Scroll */
+        .skills-container {
+            width: 80%;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.5); /* Transparent for Matrix */
+            border: 2px solid #00ff00;
+            box-shadow: 0px 0px 15px #00ff00;
+            border-radius: 10px;
+            z-index: 2;
+            text-align: left;
+        }
+
+        .skills-container h2 {
+            text-align: center;
+            text-shadow: 0px 0px 10px #00ff00;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            padding: 8px;
+            border-bottom: 1px solid #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+    
+    <div class="container">
+        <!-- Profile Image -->
+        <img src="https://i.ibb.co/jZ8QVjJ1/20250427-234207.png" class="profile-img" alt="𝗞𝗜𝗧𝗞𝗔𝗧 𝗛𝗔𝗖𝗞𝗘𝗥">
+        
+        <div class="bio">
+            <h2>👤 𝗞𝗜𝗧𝗞𝗔𝗧 𝗛𝗔𝗖𝗞𝗘𝗥 | 𝗞𝗜𝗧𝗞𝗔𝗧</h2>
+            <p>🔹 Ethical Hacker & Developer</p>
+            <p>🔹 Cyber Security Expert</p>
+            <p>🔹 Skilled in Python, Java, C++</p>
+            <div class="button">
+                <a href="https://t.me/Kitkat535" target="_blank">💬 Contact on Telegram</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Down for Skills -->
+    <div class="skills-container">
+        <h2>🛠️ Skills & Expertise</h2>
+        <ul class="skills-list">
+            <li><a href="https://www.instagram.com/pankaj_bhai_5354?igsh=MWRncmkwN2tzY2pscg==">✅ Web & Mobile App Development</a></li>
+            <li><a href="https://www.instagram.com/jai__shree_ram_5354?igsh=cW96aHF1ZWFjOTZw1">✅ Programming (Python, Java, C++, JavaScript)</a></li>
+            <li><a href="https://t.me/Myapp5354_bot">✅ Web Penetration Testing & Exploits</a></li>
+            <li><a href="https://t.me/kitkatbhai5354">✅ SQL Injection & Database Security</a></li>
+            <li><a href="https://www.facebook.com/share/1C96LsZs3h/">✅ Server Hardening & Cloud Security</a></li>
+            <li><a href="https://www.snapchat.com/add/pbhai2023322?share_id=yz6yReEa0EM&locale=en-GB">✅ Dark Web & Anonymity Techniques</a></li>
+            <li><a href="https://youtube.com/@rajpankaj5354?si=GRpWwknU6twb4s_o">✅ Android App Security Testing</a></li>
+            <li><a href="https://t.me/kitkatcamera5354_bot">✅ Dark Web & Anonymity Technique</a></li>
+            <li><a href="https://t.me/kitkatcamera5354_bot">✅ Kali Linux & Network Security</a></li>
+            <li><a href="https://t.me/rajpankaj535">✅ Red Teaming & Blue Teaming</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // Matrix Effect with "Dark Hacker Cj7 Team"
+        var canvas = document.getElementById("matrix");
+        var ctx = canvas.getContext("2d");
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
+
+        var text = "Dark Hacker Cj7 Team ";
+        var columns = Math.floor(canvas.width / 20);
+        var drops = new Array(columns).fill(1);
+
+        function draw() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.15)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "#00ff00";
+            ctx.font = "16px Courier New";
+
+            for (var i = 0; i < drops.length; i++) {
+                var char = text[Math.floor(Math.random() * text.length)];
+                ctx.fillText(char, i * 20, drops[i] * 20);
+                
+                if (drops[i] * 20 > canvas.height && Math.random() > 0.98) 
+                    drops[i] = 0;
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 35);
+    </script>
+</body>
+</html>
+
+<!-- Fetched using API by @𝗞𝗜𝗧𝗞𝗔𝗧 and owned by @Kitkat535 -->
